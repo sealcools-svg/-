@@ -1,0 +1,9 @@
+nav{
+    display: flex;
+    justify-content: space-between;
+}
+
+.img{
+    max-width: 50%;
+    height: auto;
+}
