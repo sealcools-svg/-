@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+body {
+    font-family: "Great Vibes", cursive;
+    font-family: "Lobster", sans-serif;
+
+    background: var(--color-bg);
+    color: var(--color-text);
+    font-family: var(--font-main);
+    
+}
+
+:root {
+    --font-main: 'Great Vibes', sans-serif;
+    --font-gaming: 'Lobster', cursive;
+
+    --color-primary: rgb(255, 220, 48);
+    --color-accent: cyan;
+}
+
+.store-offer {
+    width: 100%;
+    max-width: 420px;
+    padding: 28px;
+    background: var(--color-card);
+    border: 2px solid var(--color-primary);
+    border-radius: 16px;
+}
+
+.buy-btn {
+  display: inline-block;
+  padding: 12px 28px;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: sans-serif;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+  border-radius: 8px;
+}
+
+.price-block {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-family: sans-serif;
+  margin-bottom: 15px;
+}
+
+.old-price {
+  text-decoration: line-through;
+  color: #a0a0a0;
+  font-size: 14px;
+}
+
+.new-price {
+  color: #d9534f;
+  font-size: 28px;
+  font-weight: bold;
+  line-height: 1.1;
+}
+
+
+
+.card:hover {
+    transform: scale(1.1);
+}
+
+.card:active {
+    background: seagreen;
+    transform: scale(1.2);
+}
+
+.card:after {
+    content: "!!! ";
+}
+
+.card:before {
+    content: "🤩";
+}
+
+.card.animated:before {
+    content: "🎈";
+    display: inline-block;
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50%      { transform: translateY(-8px); }
+    25%      { transform: translateX(8px); }
+    75%      { transform: translateX(-8px); }
+}
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to   { transform: rotate(360deg); }
+    
+}
+.card.spin:before {
+    content: "🎀";
+    display: inline-block;
+    animation: spin 2s linear infinite;
+}
+
+
+@keyframes glow {
+    0%, 100% { box-shadow: 0 0 5px #d9534f; }
+    50%       { box-shadow: 0 0 25px cyan; }
+    
+}
+.card.glow:before {
+    content: "👢";
+    display: inline-block;
+    animation: glow 2s linear infinite;
+}
+
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50%      { transform: scale(1.08); }
+    
+}
+.card.pulse:before {
+    content: "🎀";
+    display: inline-block;
+    animation: pulse 2s linear infinite;
+}
+
+@keyframes gradientMove {
+    0% { background-position: 0%; }
+    100% { background-position: 100%; }
+}
+.card.animated {
+    background: linear-gradient(90deg, yellow, rgb(255, 55, 112), purple, darkblue, purple, rgb(255, 55, 112), yellow);
+    background-size: 300%;
+    animation: gradientMove 3s linear infinite;
+
+}
