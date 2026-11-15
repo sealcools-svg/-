@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: rgb(255, 247, 89);
+            padding: 30px;
+        }
+
+        .shop {
+        background: rgb(160, 249, 170);
+        padding: 25px;
+        max-width: 400px;
+        border-radius: 15px;
+        }
+
+        .shirt {
+        background: rgb(252, 49, 42);
+        color: white;
+        padding: 50px;
+        text-align: center;
+        border-radius: 12px;
+        font-size: 25px;
+        font-weight: bold;
+        }
+
+        .rinok:has(#orange:checked) .shirt {
+        background: rgb(248, 103, 19);
+        }
+       .rinok:has(#yellow:checked) .shirt {
+        background: rgb(221, 248, 19); 
+       }
+        .rinok:has(#green:checked) .shirt {
+        background: rgb(60, 215, 18);
+        }
+        .rinok:has(#blue:checked) .shirt {
+        background: rgb(73, 70, 241);
+        }
+        .rinok:has(#purple:checked) .shirt {
+        background: rgb(227, 10, 198);
+    }
+
+        body:has(#dno:checked){
+            background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQr7bscump7QNkANXwl1lUlrW1TGQV1Jh6Zd3ky2JyqQw&s=10);
+        }
+
+        body:has(#krov:checked){
+        background-image: url(https://www.perunica.ru/uploads/posts/2011-02/1298015873_krov.jpg);
+        }
+
+        body:has(#klad:checked){
+        background-image: url(https://novate.ru/preview/30052s3.jpg);
+        }
+    </style>
+</head>
+<body>
+    <div class="rinok">
+        <h1>Радужный рынок</h1>
+        <div class="shirt">🛍 рынок</div>
+        <h2>Выберите цвет для вашего рынка</h2>
+
+        <input type="radio" id="red" name="color" checked>
+        <label for="red">Красный</label>
+
+        <input type="radio" id="orange" name="color" checked>
+        <label for="orange">Оранжевый</label>
+
+        <input type="radio" id="yellow" name="color" checked>
+        <label for="yellow">Жёлый</label>
+
+        <input type="radio" id="green" name="color" checked>
+        <label for="green">Зелёный</label>
+
+        <input type="radio" id="blue" name="color" checked>
+        <label for="blue">Синий</label>
+
+        <input type="radio" id="purple" name="color" checked>
+        <label for="purple">Фиолетовый</label>
+
+        <h2>Выберите пропоганду</h2>
+
+        <input type="radio" id="dno" name="size" checked>
+        <label for="dno">Днище</label>
+
+        <input type="radio" id="" name="size" checked>
+        <label for="krov">Кровище</label>
+
+        <input type="radio" id="large" name="size" checked>
+        <label for="kladb">Кладбище</label>
+    </div>
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: rgb(255, 247, 89);
+            padding: 30px;
+        }
+
+    .shop {
+        background: rgb(160, 249, 170);
+        padding: 25px;
+        max-width: 400px;
+        border-radius: 15px;
+    }
+
+    .shirt {
+        background: rgb(80, 80, 252);
+        color: white;
+        padding: 50px;
+        text-align: center;
+        border-radius: 12px;
+        font-size: 25px;
+        font-weight: bold;
+    }
+
+    .shop:has(#red:checked) .shirt {
+        background: rgb(255, 35, 57);
+    }
+
+    .shop:has(#sero-buro) .shirt {
+        background: rgb(115, 81, 132);
+    }
+
+    .size-info { display: none; }
+
+    .shop:has(#small:checked) .small-info,
+    .shop:has(#medium:checked) .medium-info,
+    .shop:has(#large:checked) .large-info{
+        display: block;
+    }
+
+    .gift-fleids {
+        display: none;
+        margin-top: 15px;
+    }
+
+    .shop:has(#gift:checked) .medium-info{
+    }
+
+    .shop:has(#gift:checked) .gift-fleids{
+        display: block;
+    }
+
+    label {
+        display: inline-block;
+        margin: 10px 5px 10px 5px;
+        cursor: pointer;
+    }
+
+    input[type="text"] {
+        padding: 10px;
+    }
+    </style>
+</head>
+<body>
+    <div class="shop">
+        <h1>Крутой магазин для покупки ненужных вещей</h1>
+        <div class="shirt">бесполезность</div>
+        <h3>Выберите цвет</h3>
+        <input type="radio" id="blue" name="color" checked>
+        <label for="blue">Синий</label>
+
+        <input type="radio" id="red" name="color" checked>
+        <label for="red">Красный</label>
+
+        <input type="radio" id="sero-buro" name="color" checked>
+        <label for="sero-buro">Серо-буро-малиновый</label>
+
+        <h2>Выберите размер</h2>
+
+        <input type="radio" id="small" name="size" checked>
+        <label for="small">Small</label>
+
+        <input type="radio" id="medium" name="size" checked>
+        <label for="medium">Medium</label>
+
+        <input type="radio" id="large" name="size" checked>
+        <label for="large">Large</label>
+
+        <p class="size-info small-info">Размер S выбран</p>
+        <p class="size-info medium-info">Размер M выбран</p>
+        <p class="size-info large-info">Размер L выбран</p>
+        <br>
+
+        <input type="checkbox" id="gift">
+        <label for="gift">Подарочная упаковка</label>
+
+        <div class="gif-fleids">
+            <p>Напиши поздравление</p>
+            <input type="text" placeholder="С днём шоколадного кекса!">
+        </div>
+    </div>
+</body>
+</html>
