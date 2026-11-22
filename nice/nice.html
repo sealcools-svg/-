@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Счётчик</title>
+</head>
+<body>
+    <h1>Кликов: <div id="count2">0</div></h1>
+    <button id="btn">Крутость</button>
+    <button id="reset">Не крутость</button>
+    <button id="upgrade">Мега крутость!</button>
+    <script>
+        let count = 0;
+        let click = 1;
+        document.getElementById('btn'). onclick = function() {
+            count = count + click;
+            document.getElementById('count2').textContent = count;
+        };
+
+        document.getElementById('reset').onclick = function() {
+            count = 0;
+            document.getElementById('count2').textContent = count;
+        };
+
+        document.getElementById('upgrade').onclick = function() {
+            click = click + 1,
+            count = count - 15;
+            document.getElementById('count2').textContent = count;
+        };
+
+
+    </script>
+</body>
+</html>
